@@ -27,4 +27,21 @@ public class ArrayOps{
     }
     return adder + "}";
   }
+  public static int[] sumRows(int[][] matrix)
+  {
+    int[] thing = new int[matrix.length];
+    for (int i = 0; i < matrix.length ; i ++ ) {
+      thing[i] = sum(matrix[i]);
+    }
+    return thing;
+  }
+  public static  int[] largestInRows(int[][] matrix)
+  {
+    int[] thing = new int[matrix.length];
+    for (int i = 0;i < matrix.length ; i ++ )
+    {
+      thing[i] = largest(matrix[i]);
+    }
+    return thing;
+  }
 }
