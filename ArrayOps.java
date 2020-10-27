@@ -63,4 +63,24 @@ public class ArrayOps{
     }
     return thingbig;
   }
+  public static boolean issame(int[] arr)
+  {
+    boolean issame = true;
+    for (int i = 0; i < arr.length - 1; i ++)
+    {
+      if(arr[i] != arr[i + 1])
+      {
+        issame = false;
+      }
+    }
+    return issame;
+  }
+  public static boolean isRowMagic(int[][] matrix)
+  {
+    return issame(sumRows(matrix));
+  }
+  public static boolean isColMagic(int[][] matrix)
+  {
+    return issame(sumCols(matrix));
+  }
 }
